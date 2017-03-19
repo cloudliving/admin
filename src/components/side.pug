@@ -1,0 +1,31 @@
+div.side-area
+	div.side-area-heading.text-overflow.text-center.green
+		h2 汉阳区文明创建
+	div.side-area-panel.text-center
+		img.side-area-logo(src="../../images/avatar.png")
+		p.side-area-name.text-overflow 汉阳区国家税务局
+		p.side-area-level.text-overflow 区级文明单位
+
+	ul.side-area-nav.list-unstyled
+		//- 导航数据
+		- var navData = []
+		- var imgPath = '../../images/'
+		- navData[0] = {name: '首页', imgName: 'icon1'}
+		- navData[1] = {name: '单位管理', imgName: 'icon2'}
+		- navData[2] = {name: '材料管理', imgName: 'icon3'}
+		- navData[3] = {name: '督察督办', imgName: 'icon4'}
+		- navData[4] = {name: '数据统计', imgName: 'icon5'}
+		- navData[5] = {name: '政策宣传', imgName: 'icon6'}
+		- navData[6] = {name: '巡查员管理', imgName: 'icon7'}
+		- navData[7] = {name: '审查员管理', imgName: 'icon8'}
+
+		//- 遍历导航数据
+		each item, index in navData
+			li
+				a.side-area-nav-item(class= navActiveIndex == index ? 'active' : '', href="#")
+					//- span(class=item.icon)
+					img.side-area-nav-icon(src=`${imgPath}${item.imgName}.png`)
+					span.side-area-nav-item-name=item.name
+
+	button.side-area-toggle.text-center
+		span.glyphicon.glyphicon-menu-hamburger

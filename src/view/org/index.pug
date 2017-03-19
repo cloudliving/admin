@@ -1,0 +1,182 @@
+extends ../../components/layout
+
+block title
+	title 单位管理
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/org.styl")
+
+block side
+	- var navActiveIndex = 1
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled
+		li.location-item.green 单位管理
+
+	// 表格筛选
+	.org-filter.clearfix.mt20.mb20
+		span.pull-right.all-org
+			span.green 47
+			| 个单位	
+		form.form.form-inline
+			.form-group
+				select.select.form-control
+					option 类型
+					option 类型
+			.form-group
+				select.select.form-control
+					option 性质
+					option 性质
+			.form-group
+				select.select.form-control
+					option 级别
+					option 级别
+			.form-group
+				input.form-control(type="text" placeholder="关键字")
+			.form-group
+				button.btn.btn-success 搜索
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-plus
+					| 新建单位
+
+	// 表格
+	.m-table
+		table.gray
+			thead
+				tr
+					th 单位编号
+					th 账户名
+					th 单位全称
+					th 类型
+					th 性质
+					th 级别
+					th 状态
+					th 建立时间
+					th 操作
+			tbody
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-default 禁用
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-default 禁用
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-default 禁用
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-success 正常
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-success 正常
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-success 正常
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-success 正常
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-success 正常
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 武昌区委统战部
+					td 中国共产党武汉市武昌区委员会
+					td 单位
+					td 党政机关
+					td 县(区)文明单位
+					td 
+						span.label.label-success 正常
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+
+		// 分页
+		form.pages.form.form-inline.text-center
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-left
+			.form-group
+				span.green 1/7
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-right
+			.form-group
+				input.form-control(type="number" required)
+			.form-group
+				button.btn.btn-success 跳转

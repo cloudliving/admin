@@ -1,0 +1,22 @@
+// 头部组件
+div.layout-head.clearfix
+	// 当前用户
+	div.user.dropdown
+		p(id="dropdownMenu1" data-toggle="dropdown") 汉阳区国家税务局
+			span.caret.soft
+		ul.dropdown-menu(aria-labelledby="dropdownMenu1")
+			li
+				a(href="#") 设置
+			li
+				a(href="#") 安全退出
+
+
+	// 搜索框
+	div.global-search
+		form
+			div.col-xs-4
+				div.input-group
+					input(type="text").form-control
+					div.input-group-btn
+						button.btn.btn-default
+							span.glyphicon.glyphicon-search.soft

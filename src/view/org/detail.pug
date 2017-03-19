@@ -1,0 +1,101 @@
+extends ../../components/layout
+
+block title
+	title 单位主页
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/org.styl")
+
+block side
+	- var navActiveIndex = 1
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.gray.mb20.clearfix
+		li.location-item.pull-left 单位管理
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span.green 单位主页
+
+	// 排行面板
+	.rank-panel.mb20.text-center
+		.row
+			.col-xs-3
+				.rank-panel-item.bg1
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon14.png")
+						| 333
+					span.rank-panel-type 总榜排名
+			.col-xs-3
+				.rank-panel-item.bg2
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon15.png")
+						| 3332
+					span.rank-panel-type 同类排名
+			.col-xs-3
+				.rank-panel-item.bg3
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon12.png")
+						| 42
+					span.rank-panel-type 上传资料
+			.col-xs-3
+				.rank-panel-item.bg4
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon16.png")
+						| 42
+					span.rank-panel-type 总得分
+
+	// 单位详情
+	.org-details
+		.row.mb20
+			.col-xs-1 头像
+			.col-xs-4
+				img(src="../../images/avatar.png")
+		.row.mb20
+			.col-xs-1 单位全称
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 所属区域
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 级别
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 类型
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 联系人
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 电话
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 邮箱
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 QQ
+			.col-xs-4 汉阳区人力资源局
+		.row.mb20
+			.col-xs-1 单位地址
+			.col-xs-4 汉阳区人力资源局
+		.row
+			.col-xs-1.mr20
+				a.btn.btn-success(href="#") &nbsp;&nbsp;&nbsp;&nbsp;更改资料&nbsp;&nbsp;&nbsp;&nbsp;
+			.col-xs-1
+				botton#reset.btn.btn-success &nbsp;&nbsp;&nbsp;&nbsp;密码重置&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+block footQuote
+	script.
+		/**
+		 * 重置密码逻辑
+		 */
+
+		!(function(){
+			var btn = $('#reset')
+
+			btn.on('click', function (e) {
+
+			})
+		})()

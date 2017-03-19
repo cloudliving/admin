@@ -1,0 +1,44 @@
+extends ../../components/layout
+
+block title
+	title 新建通知
+
+block side
+	- var navActiveIndex = null
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.gray.mb20.clearfix
+		li.location-item.pull-left 通知公告
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span.green 新建消息
+
+	// 表单
+	form#app.form-horizontal
+		.form-group
+			.col-xs-1.control-label 收件单位
+			.col-xs-6
+				select.form-control
+					option 全部账号
+					option 全部账号
+					option 全部账号
+		.form-group
+			.col-xs-1.control-label 消息标题
+			.col-xs-6
+				input.form-control(type="text" placeholder="请输入消息标题")
+		.form-group
+			.col-xs-1.control-label 消息类型
+			.col-xs-6
+				select.form-control
+					option 系统通知
+					option 系统通知
+					option 系统通知
+		.form-group
+			.col-xs-1.control-label 正文
+			.col-xs-6
+				textarea.form-control(style={height: "200px"} placeholder="请输入正文")
+		.form-group
+			.col-xs-6.col-md-offset-1
+				button(type="submit").btn.btn-success &nbsp;&nbsp;&nbsp;&nbsp;发送&nbsp;&nbsp;&nbsp;&nbsp;

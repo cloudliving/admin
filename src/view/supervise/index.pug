@@ -1,0 +1,172 @@
+extends ../../components/layout
+
+block title
+	title 督察督办
+
+block side
+	- var navActiveIndex = 3
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled
+		li.location-item.green 督察督办
+
+	// 表格筛选
+	.org-filter.clearfix.mt20.mb20
+		span.pull-right.all-org
+			span.green 47
+			| 个事件
+		form.form.form-inline
+			.form-group
+				select.select.form-control
+					option 事件类型
+					option 事件类型
+			.form-group
+				select.select.form-control
+					option 事件状态
+					option 事件状态
+			.form-group
+				input.form-control(type="text" placeholder="关键字")
+			.form-group
+				button.btn.btn-success 搜索
+
+	// 表格
+	.m-table
+		table.gray
+			thead
+				tr
+					th 事件编号
+					th 督办事项
+					th 督办单位
+					th 事件类型
+					th 督办状态
+					th 扣分
+					th 建立时间
+					th 操作
+			tbody
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 中国共产党武汉市武昌区委员会
+					td 街面秩序
+					td 
+						span.label.label-success 立案
+					td 1
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+
+		// 分页
+		form.pages.form.form-inline.text-center
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-left
+			.form-group
+				span.green 1/7
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-right
+			.form-group
+				input.form-control(type="number" required)
+			.form-group
+				button.btn.btn-success 跳转

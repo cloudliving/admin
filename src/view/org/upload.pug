@@ -1,0 +1,149 @@
+extends ../../components/layout
+
+block title
+	title 新建单位
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/org.styl")
+
+block side
+	- var navActiveIndex = 1
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.gray.mb20.clearfix
+		li.location-item.pull-left 单位管理
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span 单位主页
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span.green 更新资料
+
+	// 单位信息表单
+	form#app.form-horizontal
+		.form-group
+			.col-xs-1.control-label 头像
+			.col-xs-6
+				img(:src="base64" v-show="base64")
+				input#file(type="file" @change="uploadImg($event)")
+		.form-group
+			.col-xs-1.control-label 登录名
+			.col-xs-6
+				input.form-control(type="text" value="登录名" required)
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 单位全称
+			.col-xs-6
+				input.form-control(type="text" value="单位全称" required)
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 所属区域
+			.col-xs-6
+				select.form-control(required)
+					option 区域1
+					option(selected) 区域2
+					option 区域3
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 类型
+			.col-xs-6
+				select.form-control(required)
+					option 类型1
+					option 类型2
+					option(selected) 类型3
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 性质
+			.col-xs-6
+				select.form-control(required)
+					option 性质1
+					option 性质2
+					option(selected) 性质3
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 级别
+			.col-xs-6
+				select.form-control(required)
+					option 级别1
+					option(selected) 级别2
+					option 级别3
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 联系人
+			.col-xs-6
+				input.form-control(type="text" value="联系人" required)
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 电话
+			.col-xs-6
+				input.form-control(type="text" value="电话" required)
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 邮箱
+			.col-xs-6
+				input.form-control(type="text" value="邮箱" required)
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label QQ
+			.col-xs-6
+				input.form-control(type="text" value="QQ")
+		.form-group
+			.col-xs-1.control-label 单位地址
+			.col-xs-6
+				input.form-control(type="text" value="单位地址")
+		.form-group
+			.col-xs-1.control-label 状态
+			.col-xs-6
+				p
+					label
+						input.org-upload-radio(type="radio" name="status" value="1" checked)
+						| 启用
+				p
+					label
+						input.org-upload-radio(type="radio" name="status" value="0")
+						| 禁用
+		.form-group
+			.col-xs-6.col-md-offset-1
+				button(type="submit").btn.btn-success &nbsp;&nbsp;&nbsp;&nbsp;提交&nbsp;&nbsp;&nbsp;&nbsp;
+
+block footQuote
+	script(src="../../lib/js/vue.min.js")
+	script.
+
+		/**
+		 * 上传图片，显示预览图逻辑
+		 */
+
+		!(function(){
+			// 兼容性检测
+			var reader = FileReader && new FileReader ()
+			if(!reader) return
+
+			var vm = new Vue({
+				el: '#app',
+				data: { base64: '' },
+				methods: {
+					uploadImg: function (e) {
+						var that = this
+						var file = e.target.files[0]
+
+						reader.onload = function(e){
+							that.base64 = e.target.result
+						}
+
+						reader.readAsDataURL(file)
+					}
+				}
+			})
+		})()

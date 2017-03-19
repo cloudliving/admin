@@ -1,0 +1,113 @@
+extends ../../components/layout
+
+block title
+	title 更新资料
+
+block side
+	- var navActiveIndex = 6
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.gray.mb20.clearfix
+		li.location-item.pull-left 巡查员管理
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span 巡查员信息
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span.green 更新资料
+
+	// 单位信息表单
+	form#app.form-horizontal
+		.form-group
+			.col-xs-1.control-label 头像
+			.col-xs-6
+				// 如需页面载入时显示头像
+				// 需将地址传入页尾js中的base64属性里
+				// 写进标签的src字段里无效
+				img(:src="base64" v-show="base64")
+				input#file(type="file" @change="uploadImg($event)")
+		.form-group
+			.col-xs-1.control-label 登录名
+			.col-xs-6
+				input.form-control(type="text" value="登录名" required)
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 巡查员姓名
+			.col-xs-6
+				input.form-control(type="text" value="巡查员姓名" required)
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 所属单位
+			.col-xs-6
+				select.form-control(required)
+					option 所属单位
+					option 所属单位
+					option 所属单位
+			.col-xs-1.control-label
+				img(src="../../images/star.png").pull-left
+		.form-group
+			.col-xs-1.control-label 电话
+			.col-xs-6
+				input.form-control(type="text" value="电话")
+		.form-group
+			.col-xs-1.control-label 邮箱
+			.col-xs-6
+				input.form-control(type="text" value="邮箱")
+		.form-group
+			.col-xs-1.control-label QQ
+			.col-xs-6
+				input.form-control(type="text" value="QQ")
+		.form-group
+			.col-xs-1.control-label 联系地址
+			.col-xs-6
+				input.form-control(type="text" value="单位地址")
+		.form-group
+			.col-xs-1.control-label 状态
+			.col-xs-6
+				p
+					label
+						input.policy-upload-radio(type="radio" name="status" value="1" checked)
+						| 启用
+				p
+					label
+						input.policy-upload-radio(type="radio" name="status" value="0")
+						| 禁用
+		.form-group
+			.col-xs-6.col-md-offset-1
+				button(type="submit").btn.btn-success &nbsp;&nbsp;&nbsp;&nbsp;提交&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+block footQuote
+	script(src="../../lib/js/vue.min.js")
+	script.
+
+		/**
+		 * 上传图片，显示预览图逻辑
+		 */
+
+		!(function(){
+			// 兼容性检测
+			var reader = FileReader && new FileReader ()
+			if(!reader) return
+
+			var vm = new Vue({
+				el: '#app',
+				data: { base64: '' },
+				methods: {
+					uploadImg: function (e) {
+						var that = this
+						var file = e.target.files[0]
+
+						reader.onload = function(e){
+							that.base64 = e.target.result
+						}
+
+						reader.readAsDataURL(file)
+					}
+				}
+			})
+		})()

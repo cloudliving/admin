@@ -1,0 +1,291 @@
+@import '../mixin/variables'
+
+/**
+ * Common
+ */
+ 
+.soft
+	color soft
+.gray 
+	color #666
+.green
+	color green
+.bgfff
+	background #fff
+.bg1
+	background #e8ad3f
+.bg2
+	background #bf70c2
+.bg3
+	background #589fd3
+.bg4
+	background #25c2a3
+.text-overflow
+	overflow hidden
+	text-overflow ellipsis
+	white-space nowrap
+.mt10
+	margin-top 10px
+.mt20
+	margin-top 20px
+.mr10
+	margin-right 10px
+.mr20
+	margin-right 20px
+.mb10
+	margin-bottom 10px
+.mb20
+	margin-bottom 20px
+.ml10
+	margin-left 10px
+.ml20
+	margin-left 20px
+.box
+	padding 25px 30px
+	background-color #fff
+	border 1px solid borderColor
+.transition
+	transition all .4s ease	
+
+/**
+ * Layout
+ */
+
+.layout-side
+	position absolute
+	z-index 1
+	top 0
+	left 0
+	bottom 0
+	width sideWidth
+	background rgb(31, 33, 36)
+	color #fff
+	&.z-close
+		width sideWidthMin
+.layout-main
+	position absolute
+	top 70px
+	right 0
+	bottom 0
+	left sideWidth
+	&.z-close
+		left sideWidthMin
+	&-ctn
+		padding 20px
+		height 100%
+		overflow-y auto
+
+/**
+ * Head area
+ */
+
+.layout-head
+	position absolute
+	z-index 1
+	top 0
+	right 0
+	left sideWidth
+	height 70px
+	padding 15px 50px 0
+	border-bottom 1px solid borderColor
+	background bodyBackground
+	&.z-close
+		left sideWidthMin
+.user
+	float right
+	cursor pointer
+
+/**
+ * Side area
+ */
+
+.side-area-heading
+	line-height 70px
+
+.side-area-panel
+	padding 20px 0
+	margin-bottom 30px
+	background black
+.side-area-name
+	font-size 18px
+	font-weight bold
+	margin-top 15px
+.side-area-level
+	font-size 14px
+	font-weight bold
+	color #f39800
+
+.side-area-nav-icon
+	margin-right 10px
+.side-area-nav-item
+	display block
+	line-height 55px
+	padding-left 40px
+	color #fff
+	&.active
+	&:hover
+		padding-left 30px
+		border-left 8px solid green
+		background black
+		color #fff
+	&:hover
+		text-decoration none
+	
+.side-area-toggle
+	position absolute
+	left 0
+	bottom 0
+	width 100%
+	height 55px
+	background black
+	border none
+	outline none
+
+.z-close
+	.side-area-heading
+	.side-area-name
+	.side-area-level
+	.side-area-nav-item-name
+			display none
+
+/**
+ * Table
+ */
+
+.m-table
+	border 1px solid borderColor
+	border-radius 4px
+	overflow hidden
+	table
+		width 100%
+	thead
+		border-bottom 1px solid borderColor
+	tr
+		background #fff
+	tr:nth-of-type(even)
+		background #f2f2f2
+	th
+	td
+		padding 15px 20px
+	a
+		text-decoration none
+	.pages
+		padding 20px 0
+		border-top 1px solid borderColor
+		background #fff
+	.glyphicon
+		margin-right 5px
+
+/**
+ * Form
+ */
+
+.form
+	.select
+		padding-right 50px
+
+/**
+ * Loading
+ */ 
+ 
+.loading
+	position fixed
+	z-index 99999
+	top 0
+	right 0
+	bottom 0
+	left 0
+	background #fff
+
+/**
+ * Location
+ */
+
+.location
+	color #808080
+	.glyphicon
+		margin 0 5px
+ 
+/**
+ * Rank-panel
+ */
+
+.rank-panel
+	&-item
+		padding 25px 0
+		color #fff
+		box-shadow 0 0 3px 0 rgba(0,0,0,.25)
+	&-icon
+		margin-right 10px
+	&-count
+		font-size 34px
+	&-type
+		font-size 18px
+
+/**
+ * Pop-up
+ */
+ 
+.pop-up
+	position fixed
+	z-index 9999
+	left 50%
+	top 50%
+	width 350px
+	border 1px solid borderColor
+	box-shadow 0 0 10px 1px rgba(0,0,0,.2)
+	transform translate(-50%, -50%)
+	&-head
+		padding 0 20px
+		line-height 50px
+		background #e8e8e8
+		color #787878
+	&-close
+		float right
+		margin-top 15px
+		cursor pointer
+	&-body
+		background #fff
+		padding 20px
+	&-ctn
+		min-height 50px
+
+
+/**
+ * Rewrite bootStrap Default style
+ */
+ 
+.btn
+.form-control
+	border 1px solid borderColor !important
+.btn
+.form-control.z-pale
+	outline none !important
+	box-shadow none !important
+
+.btn-success
+	background-color green !important
+	&:hover
+		background-color greenHover !important
+	&:active
+	&.active
+	&:focus
+	&.focus
+		background-color greenActive !important
+
+.label
+	padding .3em .7em
+	font-weight 400
+.label-default
+	background-color #b3b3b3
+.label-success
+	background-color green
+
+.modal-dialog
+	margin 100px auto
+
+input[type=checkbox]
+input[type=radio]
+	position relative
+	top 2px
+	margin-right 5px

@@ -1,0 +1,60 @@
+extends ../../components/layout
+
+block title
+	title 巡查员信息
+
+block side
+	- var navActiveIndex = 6
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.gray.mb20.clearfix
+		li.location-item.pull-left 巡查员管理
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span.green 巡查员信息
+
+	// 巡查员信息
+	div
+		.row.mb20
+			.col-xs-1.text-right 头像
+			.col-xs-3
+				img(src="../../images/avatar.png")
+		.row.mb20
+			.col-xs-1.text-right 登录名
+			.col-xs-3 巴拉巴拉
+		.row.mb20
+			.col-xs-1.text-right 巡查员姓名
+			.col-xs-3 巴拉巴拉
+		.row.mb20
+			.col-xs-1.text-right 密码
+			.col-xs-3 ···············
+			.col-xs-1
+				button(type="button").btn.btn-success 重置密码
+		.row.mb20
+			.col-xs-1.text-right 所属单位
+			.col-xs-3 巴拉巴拉
+		.row.mb20
+			.col-xs-1.text-right 电话
+			.col-xs-3 巴拉巴拉
+		.row.mb20
+			.col-xs-1.text-right 邮箱
+			.col-xs-3 巴拉巴拉
+		.row.mb20
+			.col-xs-1.text-right QQ
+			.col-xs-3 巴拉巴拉
+		.row.mb20
+			.col-xs-1.text-right 联系地址
+			.col-xs-3 巴拉巴拉
+		.row.mb20
+			.col-xs-1.text-right 状态
+			.col-xs-3
+				span.label.label-success 启用
+		.row.mb20
+			.col-xs-6.col-md-offset-1
+				a(href="#").btn.btn-success &nbsp;&nbsp;&nbsp;&nbsp;更新资料&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+block footQuote
+	script

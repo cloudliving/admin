@@ -1,0 +1,174 @@
+extends ../../components/layout
+
+block title
+	title 材料管理
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/doc.styl")
+
+block side
+	- var navActiveIndex = 2
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.clearfix
+		li.location-item.green.pull-left 材料管理
+
+	// 表格筛选
+	.clearfix.mt20.mb20
+		span.pull-right.all-doc
+			span.green 467
+			| 个材料	
+		form.form.form-inline
+			.form-group
+				select.select.form-control
+					option 分类
+					option 分类
+			.form-group
+				select.select.form-control
+					option 状态
+					option 状态
+			.form-group
+				input.form-control(type="text" placeholder="关键字")
+			.form-group
+				button.btn.btn-success 搜索
+
+	// 表格
+	.m-table
+		table.gray
+			thead
+				tr
+					th 材料编号
+					th 标题
+					th 上报单位
+					th 分类
+					th 材料状态
+					th 应得分
+					th 实得分
+					th 上报时间
+					th 操作
+			tbody
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-default 退待上报
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-default 退待上报
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-default 退待上报
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-success 已通过
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-success 已通过
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-warning 待审核
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-success 已通过
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-success 已通过
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+				tr
+					td NO123
+					td 汉阳区国税局连续7次
+					td 武昌区委员会
+					td 组织领导
+					td 
+						span.label.label-success 已通过
+					td 4
+					td 4
+					td 2017-01-13 14:00
+					td
+						a.green.glyphicon.glyphicon-eye-open(href="#")
+
+		// 分页
+		form.pages.form.form-inline.text-center
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-left
+			.form-group
+				span.green 1/7
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-right
+			.form-group
+				input.form-control(type="number" required)
+			.form-group
+				button.btn.btn-success 跳转

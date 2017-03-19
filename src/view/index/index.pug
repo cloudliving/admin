@@ -1,0 +1,107 @@
+extends ../../components/layout
+
+block title
+	title 首页
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/index.styl")
+
+block side
+	- var navActiveIndex = 0
+	include ../../components/side
+
+block main
+	img.index-banner.img-responsive(src="../../images/banner.png")
+
+	// 数据统计
+	.index-panel.row
+		.col-xs-3
+			.index-panel-item.text-center.bg1
+				p
+					img.index-panel-icon(src="../../images/icon11.png")
+					| 333
+				span 单位总数
+		.col-xs-3
+			.index-panel-item.text-center.bg2
+				p
+					img.index-panel-icon(src="../../images/icon12.png")
+					| 333
+				span 单位总数
+		.col-xs-3
+			.index-panel-item.text-center.bg3
+				p
+					img.index-panel-icon(src="../../images/icon13.png")
+					| 333
+				span 单位总数
+		.col-xs-3
+			#time.index-time.clearfix.text-center
+				.index-time-left.bg4
+					.index-time-left-ctn
+						p 星期{{week}}
+						p {{month}}月{{date}}日
+				.index-time-right.green {{time}}
+
+	// 公告通知
+	.index-table
+		.index-table-head.gray
+			a.pull-right.green(href="#") 更多
+			span.h4 公告通知
+		.m-table
+			table
+				tr
+					td
+						span.glyphicon.glyphicon-bullhorn.green
+						| 武汉市文明办发布通知要求给青少年一个丰富的教程
+					td 汉阳区文明办
+					td 2017-01-01
+				tr
+					td
+						span.glyphicon.glyphicon-bullhorn.green
+						| 武汉市文明办发布通知要求给青少年一个丰富的教程
+					td 汉阳区文明办
+					td 2017-01-01
+				tr
+					td
+						span.glyphicon.glyphicon-bullhorn.green
+						| 武汉市文明办发布通知要求给青少年一个丰富的教程
+					td 汉阳区文明办
+					td 2017-01-01
+				tr
+					td
+						span.glyphicon.glyphicon-bullhorn.green
+						| 武汉市文明办发布通知要求给青少年一个丰富的教程
+					td 汉阳区文明办
+					td 2017-01-01
+
+
+block footQuote
+	script(src="../../lib/js/moment.min.js")
+	script(src="../../lib/js/vue.min.js")
+	script.
+		var vm = new Vue({
+			el: '#time',
+			data: {
+				time: '',
+				month: '',
+				date: '',
+				week: '',
+				weekCN: ['天', '一', '二', '三', '四', '五', '六']
+			},
+			mounted: function () {
+				var that = this
+				var tempTime = moment().format('M-DD-HH:mm').split('-')
+
+				that.month = tempTime[0]
+				that.date = tempTime[1]
+				that.time = tempTime[2]
+				that.week = that.weekCN[new Date().getDay()]
+
+				/**
+				 * 60s 刷新一次时间
+				 */
+
+				setInterval(function(){
+					that.time = moment().format('HH:mm')
+				}, 60000)
+			} 
+		})

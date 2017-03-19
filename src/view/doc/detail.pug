@@ -1,0 +1,59 @@
+extends ../../components/layout
+
+block title
+	title 材料详情
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/doc.styl")
+
+block side
+	- var navActiveIndex = 2
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.clearfix
+		li.location-item.pull-left 材料管理
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span.green 材料详情
+
+	// 详情头
+	.box.mb20.doc-details-head
+		img.doc-details-status(src="../../images/seal1.png")
+		img.doc-details-status(src="../../images/seal2.png")
+		img.doc-details-status(src="../../images/seal3.png")
+		h4.mb20 2017年1月武昌区巴拉巴拉巴拉喇叭拉吧拉吧拉吧拉吧拉吧拉
+		.row.mb10
+			.col-xs-1 上传单位
+			.col-xs-3.green 汉阳区巴拉巴拉巴拉芭
+			.col-xs-1 上传时间
+			.col-xs-3.green 2017-01-22
+		.row.mb10
+			.col-xs-1 上传单位
+			.col-xs-3.green 汉阳区巴拉巴拉巴拉芭
+			.col-xs-1 上传时间
+			.col-xs-3.green 2017-01-22
+		.row.mb10
+			.col-xs-1 考核内容
+			.col-xs-11 吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦不
+		.row.mb10
+			.col-xs-1 计分标准
+			.col-xs-3 吧啦吧啦吧啦吧啦吧啦吧啦吧啦
+		.row.mb10
+			.col-xs-1 点评备注
+			.col-xs-3 不了喀巴拉巴拉巴拉巴拉巴拉巴拉
+
+	// 详情正文
+	.box.doc-details-ctn
+		h4.mb20 
+			span.green.mr10 正文
+			| 2017年1月武昌区巴拉巴拉巴拉喇叭拉吧拉吧拉吧拉吧拉吧拉
+
+		p 巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭
+
+		img(src="../../images/banner.png")
+
+		p 巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭
+
+		p 巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭巴拉巴拉吧啦吧啦吧啦吧啦吧啦吧啦吧啦不啊拉吧拉吧拉吧拉吧拉吧拉吧拉吧拉吧喇叭

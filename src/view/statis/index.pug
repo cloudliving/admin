@@ -1,0 +1,151 @@
+extends ../../components/layout
+
+block title
+	title 数据统计
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/statis.styl")
+
+block side
+	- var navActiveIndex = 4
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.clearfix
+		li.location-item.pull-left.green 数据统计
+
+	// 统计面板
+	.rank-panel.mb20.text-center
+		.row
+			.col-xs-3
+				.rank-panel-item.bg1
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon11.png")
+						| 333
+					span.rank-panel-type 单位总数
+			.col-xs-3
+				.rank-panel-item.bg2
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon12.png")
+						| 3332
+					span.rank-panel-type 材料总数
+			.col-xs-3
+				.rank-panel-item.bg3
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon13.png")
+						| 42
+					span.rank-panel-type 督办事项
+			.col-xs-3
+				.rank-panel-item.bg4
+					p.rank-panel-count
+						img.rank-panel-icon(src="../../images/icon17.png")
+						| 42
+					span.rank-panel-type 政策宣传
+
+	// rank
+	.row.text-center
+		.col-xs-4
+			div.border-radius
+				.rank-head 前十名
+				ul.rank-list.list-unstyled
+					li.rank-list-item
+						span.rank-list-count 1
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 2
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 3
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 4
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 5
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 6
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 7
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 8
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 9
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 10
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+
+		.col-xs-4
+			div.border-radius
+				.rank-head 排行榜
+				ul.rank-menu.list-unstyled
+					li.rank-menu-item
+						a(href="#") 排行总榜
+					li.rank-menu-item
+						a(href="#") 党政机关排行
+					li.rank-menu-item
+						a(href="#") 事业单位排行
+					li.rank-menu-item
+						a(href="#") 企业单位排行
+					li.rank-menu-item
+						a(href="#") 人民团体排行
+
+		.col-xs-4
+			div.border-radius
+				.rank-head 后十名
+				ul.rank-list.list-unstyled
+					li.rank-list-item
+						span.rank-list-count 91
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 92
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 93
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 94
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 95
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 96
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 97
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 98
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 99
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分
+					li.rank-list-item
+						span.rank-list-count 100
+						span.rank-list-name 国税局
+						span.rank-list-score.green 925分

@@ -1,0 +1,112 @@
+extends ../../components/layout
+
+block title
+	title 数据统计
+
+block headQuote
+	link(rel="stylesheet" href="../../stylus/statis.styl")
+
+block side
+	- var navActiveIndex = 4
+	include ../../components/side
+
+block main
+	//  当前位置
+	ul.location.list-unstyled.clearfix.mb20
+		li.location-item.pull-left 数据统计
+		li.location-item.pull-left
+			span.glyphicon.glyphicon-menu-right
+			span.green 总排行榜
+
+	.mb20
+		a.btn.btn-success(href="#") 导出排行榜数据
+
+	// 表格
+	.m-table
+		table.gray
+			thead
+				tr
+					th 名次
+					th 单位名次
+					th 材料数
+					th 得分
+					th 趋势
+			tbody
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/down.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+				tr
+					td 1
+					td 国税局
+					td 112
+					td 92.5
+					td 
+						img(src="../../images/up.png")
+
+		// 分页
+		form.pages.form.form-inline.text-center
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-left
+			.form-group
+				span.green 1/7
+			.form-group
+				a.btn.btn-success(href="#")
+					span.glyphicon.glyphicon-menu-right
+			.form-group
+				input.form-control(type="number" required)
+			.form-group
+				button.btn.btn-success 跳转
