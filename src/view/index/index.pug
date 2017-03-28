@@ -11,7 +11,20 @@ block side
 	include ../../components/side
 
 block main
-	img.index-banner.img-responsive(src="../../images/banner.png")
+	// 轮播图
+	#slider.index-banner.carousel.slide(data-ride='carousel')
+		ol.carousel-indicators
+			li.active(data-target='#slider', data-slide-to='0')
+			li(data-target='#slider', data-slide-to='1')
+			li(data-target='#slider', data-slide-to='2')
+		.carousel-inner(role='listbox')
+			.item.active
+				img(src='../../images/banner.png')
+			.item
+				img(src='../../images/banner.png')
+			.item
+				img(src="../../images/banner.png")
+
 
 	// 数据统计
 	.index-panel.row

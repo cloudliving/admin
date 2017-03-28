@@ -122,6 +122,8 @@
 	line-height 55px
 	padding-left 40px
 	color #fff
+	@media screen and (max-height: 768px)
+		line-height 40px
 	&.active
 	&:hover
 		padding-left 30px
@@ -289,3 +291,5 @@ input[type=radio]
 	position relative
 	top 2px
 	margin-right 5px
+input[type="file"]
+	display inline-block

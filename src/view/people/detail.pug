@@ -3,6 +3,10 @@ extends ../../components/layout
 block title
 	title 巡查员信息
 
+block headQuote
+	style.
+		.preview {width: 80px; height: 80px; border-radius: 50%;}
+
 block side
 	- var navActiveIndex = 6
 	include ../../components/side
@@ -20,7 +24,7 @@ block main
 		.row.mb20
 			.col-xs-1.text-right 头像
 			.col-xs-3
-				img(src="../../images/avatar.png")
+				img.preview(src="../../images/avatar.png")
 		.row.mb20
 			.col-xs-1.text-right 登录名
 			.col-xs-3 巴拉巴拉

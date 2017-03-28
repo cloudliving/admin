@@ -3,6 +3,10 @@ extends ../../components/layout
 block title
 	title 更新资料
 
+block headQuote
+	style.
+		.preview {width: 80px; height: 80px; border-radius: 50%;}
+
 block side
 	- var navActiveIndex = 6
 	include ../../components/side
@@ -26,7 +30,7 @@ block main
 				// 如需页面载入时显示头像
 				// 需将地址传入页尾js中的base64属性里
 				// 写进标签的src字段里无效
-				img(:src="base64" v-show="base64")
+				img.preview(:src="base64" v-show="base64")
 				input#file(type="file" @change="uploadImg($event)")
 		.form-group
 			.col-xs-1.control-label 登录名

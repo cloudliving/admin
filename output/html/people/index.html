@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN"></html>
+<head>
+  <meta charset="UFT-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <title>巡查员管理</title>
+  <link rel="stylesheet" href="http://cloudliving.b0.upaiyun.com/wmb/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cloudliving.b0.upaiyun.com/wmb/css/reset.css">
+  <link rel="stylesheet" href="http://cloudliving.b0.upaiyun.com/wmb/css/components.css">
+</head>
+<body>
+  <!-- 头部组件-->
+  <div class="layout-head clearfix">
+    <!-- 当前用户-->
+    <div class="user dropdown">
+      <p id="dropdownMenu1" data-toggle="dropdown">汉阳区国家税务局<span class="caret soft"></span></p>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">设置</a></li>
+        <li><a href="#">安全退出</a></li>
+      </ul>
+    </div>
+    <!-- 搜索框-->
+    <div class="global-search">
+      <form>
+        <div class="col-xs-4">
+          <div class="input-group">
+            <input class="form-control" type="text">
+            <div class="input-group-btn">
+              <button class="btn btn-default"><span class="glyphicon glyphicon-search soft"></span></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="layout-side">
+    <div class="side-area">
+      <div class="side-area-heading text-overflow text-center green">
+        <h2>汉阳区文明创建</h2>
+      </div>
+      <div class="side-area-panel text-center"><img class="side-area-logo" src="http://cloudliving.b0.upaiyun.com/wmb/images/avatar.png">
+        <p class="side-area-name text-overflow">汉阳区国家税务局</p>
+        <p class="side-area-level text-overflow">区级文明单位</p>
+      </div>
+      <ul class="side-area-nav list-unstyled">
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon1.png"><span class="side-area-nav-item-name">首页</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon2.png"><span class="side-area-nav-item-name">单位管理</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon3.png"><span class="side-area-nav-item-name">材料管理</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon4.png"><span class="side-area-nav-item-name">督察督办</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon5.png"><span class="side-area-nav-item-name">数据统计</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon6.png"><span class="side-area-nav-item-name">政策宣传</span></a></li>
+        <li><a class="side-area-nav-item active" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon7.png"><span class="side-area-nav-item-name">巡查员管理</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon8.png"><span class="side-area-nav-item-name">审查员管理</span></a></li>
+      </ul>
+      <button class="side-area-toggle text-center"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+    </div>
+  </div>
+  <div class="layout-main">
+    <div class="layout-main-ctn">
+      <!--  当前位置-->
+      <ul class="location list-unstyled">
+        <li class="location-item green">巡查员管理</li>
+      </ul>
+      <!-- 表格筛选-->
+      <div class="org-filter clearfix mt20 mb20"><span class="pull-right mt10"><span class="green">47</span>个巡查员</span>
+        <form class="form form-inline">
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="关键字">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success">搜索</button>
+          </div>
+          <div class="form-group"><a class="btn btn-success" href="#"><span class="glyphicon glyphicon-plus"></span>新建巡查员</a></div>
+        </form>
+      </div>
+      <!-- 表格-->
+      <div class="m-table">
+        <table class="gray">
+          <thead>
+            <tr>
+              <th>编号</th>
+              <th>账户名</th>
+              <th>姓名</th>
+              <th>所属单位</th>
+              <th>状态</th>
+              <th>建立时间</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-default">禁用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-success">启用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-default">禁用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-success">启用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-default">禁用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-success">启用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-default">禁用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-success">启用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-default">禁用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-success">启用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-default">禁用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+            <tr>
+              <td>NO123</td>
+              <td>巡查老司机</td>
+              <td>老司机</td>
+              <td>国税局巴拉巴拉巴拉巴拉巴拉</td>
+              <td> <span class="label label-success">启用</span></td>
+              <td>2017-01-13 14:00</td>
+              <td><a class="green glyphicon glyphicon-eye-open" href="#"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- 分页-->
+        <form class="pages form form-inline text-center">
+          <div class="form-group"><a class="btn btn-success" href="#"><span class="glyphicon glyphicon-menu-left"></span></a></div>
+          <div class="form-group"><span class="green">1/7</span></div>
+          <div class="form-group"><a class="btn btn-success" href="#"><span class="glyphicon glyphicon-menu-right"></span></a></div>
+          <div class="form-group">
+            <input class="form-control" type="number" required>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success">跳转</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="loading"></div>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cloudliving.b0.upaiyun.com/wmb/lib/js/bootstrap.min.js"></script>
+  <script src="http://cloudliving.b0.upaiyun.com/wmb/js/main.js"></script>
+</body>

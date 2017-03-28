@@ -23,8 +23,8 @@ block main
 		.form-group
 			.col-xs-1.control-label 头像
 			.col-xs-6
-				img(:src="base64" v-show="base64")
-				input#file(type="file" @change="uploadImg($event)")
+				img.org-avatar-preview(:src="base64" v-show="base64")
+				input#file.org-input-file(type="file" @change="uploadImg($event)")
 		.form-group
 			.col-xs-1.control-label 登录名
 			.col-xs-6

@@ -24,9 +24,9 @@ fis
 		release: '/html/$1'
 	})
 	// 给资源加上统一路径
-	// .match('!*.pug', {
-		// domain: 'publicPath/'
-	// })
+	.match('!*.pug', {
+		domain: 'http://cloudliving.b0.upaiyun.com/wmb'
+	})
 	.match('src/stylus/(*.styl)', {
 		release: '/css/$1',
 		optimizer: fis.plugin('clean-css'),

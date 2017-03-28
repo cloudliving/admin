@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN"></html>
+<head>
+  <meta charset="UFT-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <title>更新资料</title>
+  <link rel="stylesheet" href="http://cloudliving.b0.upaiyun.com/wmb/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://cloudliving.b0.upaiyun.com/wmb/css/reset.css">
+  <link rel="stylesheet" href="http://cloudliving.b0.upaiyun.com/wmb/css/components.css">
+  <style>
+    .preview {width: 80px; height: 80px; border-radius: 50%;}
+    
+  </style>
+</head>
+<body>
+  <!-- 头部组件-->
+  <div class="layout-head clearfix">
+    <!-- 当前用户-->
+    <div class="user dropdown">
+      <p id="dropdownMenu1" data-toggle="dropdown">汉阳区国家税务局<span class="caret soft"></span></p>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">设置</a></li>
+        <li><a href="#">安全退出</a></li>
+      </ul>
+    </div>
+    <!-- 搜索框-->
+    <div class="global-search">
+      <form>
+        <div class="col-xs-4">
+          <div class="input-group">
+            <input class="form-control" type="text">
+            <div class="input-group-btn">
+              <button class="btn btn-default"><span class="glyphicon glyphicon-search soft"></span></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="layout-side">
+    <div class="side-area">
+      <div class="side-area-heading text-overflow text-center green">
+        <h2>汉阳区文明创建</h2>
+      </div>
+      <div class="side-area-panel text-center"><img class="side-area-logo" src="http://cloudliving.b0.upaiyun.com/wmb/images/avatar.png">
+        <p class="side-area-name text-overflow">汉阳区国家税务局</p>
+        <p class="side-area-level text-overflow">区级文明单位</p>
+      </div>
+      <ul class="side-area-nav list-unstyled">
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon1.png"><span class="side-area-nav-item-name">首页</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon2.png"><span class="side-area-nav-item-name">单位管理</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon3.png"><span class="side-area-nav-item-name">材料管理</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon4.png"><span class="side-area-nav-item-name">督察督办</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon5.png"><span class="side-area-nav-item-name">数据统计</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon6.png"><span class="side-area-nav-item-name">政策宣传</span></a></li>
+        <li><a class="side-area-nav-item active" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon7.png"><span class="side-area-nav-item-name">巡查员管理</span></a></li>
+        <li><a class="side-area-nav-item" href="#"><img class="side-area-nav-icon" src="http://cloudliving.b0.upaiyun.com/wmb/images/icon8.png"><span class="side-area-nav-item-name">审查员管理</span></a></li>
+      </ul>
+      <button class="side-area-toggle text-center"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+    </div>
+  </div>
+  <div class="layout-main">
+    <div class="layout-main-ctn">
+      <!--  当前位置-->
+      <ul class="location list-unstyled gray mb20 clearfix">
+        <li class="location-item pull-left">巡查员管理</li>
+        <li class="location-item pull-left"><span class="glyphicon glyphicon-menu-right"></span><span>巡查员信息</span></li>
+        <li class="location-item pull-left"><span class="glyphicon glyphicon-menu-right"></span><span class="green">更新资料</span></li>
+      </ul>
+      <!-- 单位信息表单-->
+      <form class="form-horizontal" id="app">
+        <div class="form-group">
+          <div class="col-xs-1 control-label">头像</div>
+          <div class="col-xs-6">
+            <!-- 如需页面载入时显示头像-->
+            <!-- 需将地址传入页尾js中的base64属性里-->
+            <!-- 写进标签的src字段里无效--><img class="preview" :src="base64" v-show="base64">
+            <input id="file" type="file" @change="uploadImg($event)">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">登录名</div>
+          <div class="col-xs-6">
+            <input class="form-control" type="text" value="登录名" required>
+          </div>
+          <div class="col-xs-1 control-label"><img class="pull-left" src="http://cloudliving.b0.upaiyun.com/wmb/images/star.png"></div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">巡查员姓名</div>
+          <div class="col-xs-6">
+            <input class="form-control" type="text" value="巡查员姓名" required>
+          </div>
+          <div class="col-xs-1 control-label"><img class="pull-left" src="http://cloudliving.b0.upaiyun.com/wmb/images/star.png"></div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">所属单位</div>
+          <div class="col-xs-6">
+            <select class="form-control" required>
+              <option>所属单位</option>
+              <option>所属单位</option>
+              <option>所属单位</option>
+            </select>
+          </div>
+          <div class="col-xs-1 control-label"><img class="pull-left" src="http://cloudliving.b0.upaiyun.com/wmb/images/star.png"></div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">电话</div>
+          <div class="col-xs-6">
+            <input class="form-control" type="text" value="电话">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">邮箱</div>
+          <div class="col-xs-6">
+            <input class="form-control" type="text" value="邮箱">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">QQ</div>
+          <div class="col-xs-6">
+            <input class="form-control" type="text" value="QQ">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">联系地址</div>
+          <div class="col-xs-6">
+            <input class="form-control" type="text" value="单位地址">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-1 control-label">状态</div>
+          <div class="col-xs-6">
+            <p>
+              <label>
+                <input class="policy-upload-radio" type="radio" name="status" value="1" checked>启用
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="policy-upload-radio" type="radio" name="status" value="0">禁用
+              </label>
+            </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-6 col-md-offset-1">
+            <button class="btn btn-success" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;提交&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="loading"></div>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cloudliving.b0.upaiyun.com/wmb/lib/js/bootstrap.min.js"></script>
+  <script src="http://cloudliving.b0.upaiyun.com/wmb/js/main.js"></script>
+  <script src="http://cloudliving.b0.upaiyun.com/wmb/lib/js/vue.min.js"></script>
+  <script>
+    /**
+     * 上传图片，显示预览图逻辑
+     */
+    
+    !(function(){
+    	// 兼容性检测
+    	var reader = FileReader && new FileReader ()
+    	if(!reader) return
+    
+    	var vm = new Vue({
+    		el: '#app',
+    		data: { base64: '' },
+    		methods: {
+    			uploadImg: function (e) {
+    				var that = this
+    				var file = e.target.files[0]
+    
+    				reader.onload = function(e){
+    					that.base64 = e.target.result
+    				}
+    
+    				reader.readAsDataURL(file)
+    			}
+    		}
+    	})
+    })()
+  </script>
+</body>
